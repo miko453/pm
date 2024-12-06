@@ -552,7 +552,7 @@ if [ "$(uname -s)" != "Darwin" ] || [ "$IS_CROSSCOMPILE" == "yes" ] || [ "$COMPI
 
 	#mbed TLS
 	echo -n "[mbed TLS] downloading $MBEDTLS_VERSION..."
-	download_file "https://pm.bjw7.eu.org/compile/mbedtls-${MBEDTLS_VERSION}-gpl.tgz" | tar -zx >> "$DIR/install.log" 2>&1
+	download_file "https://pm.bjw7.eu.org/compile/mbedtls-${MBEDTLS_VERSION}.tar.gz" | tar -zx >> "$DIR/install.log" 2>&1
 	mv mbedtls-${MBEDTLS_VERSION} mbedtls
 	echo -n " checking..."
 	cd mbedtls
@@ -767,7 +767,7 @@ echo " done!"
 
 #pthreads
 echo -n "[PHP pthreads] downloading $PTHREADS_VERSION..."
-download_file "https://pm.bjw7.eu.org/compile/pthreads-$PTHREADS_VERSION.tgz" | tar -zx >> "$DIR/install.log" 2>&1
+download_file "https://pm.bjw7.eu.org/compile/pthreads-$PTHREADS_VERSION.tar.gz" | tar -zx >> "$DIR/install.log" 2>&1
 #download_file "https://github.com/krakjoe/pthreads/archive/$PTHREADS_VERSION.tar.gz" | tar -zx >> "$DIR/install.log" 2>&1
 mv pthreads-$PTHREADS_VERSION "$DIR/install_data/php/ext/pthreads"
 echo " done!"
@@ -791,7 +791,7 @@ fi
 #WeakRef
 #TODO Remove when there is support for PHP7
 echo -n "[PHP Weakref] downloading $WEAKREF_VERSION..."
-download_file "http://pecl.php.net/get/Weakref-$WEAKREF_VERSION.tgz" | tar -zx >> "$DIR/install.log" 2>&1
+download_file "https://pm.bjw7.eu.org/compile/weakref-$WEAKREF_VERSION.tar.gz" | tar -zx >> "$DIR/install.log" 2>&1
 mv Weakref-$WEAKREF_VERSION "$DIR/install_data/php/ext/weakref"
 echo " done!"
 
