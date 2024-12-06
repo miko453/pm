@@ -553,7 +553,7 @@ if [ "$(uname -s)" != "Darwin" ] || [ "$IS_CROSSCOMPILE" == "yes" ] || [ "$COMPI
 	#mbed TLS
 	echo -n "[mbed TLS] downloading $MBEDTLS_VERSION..."
 	download_file "https://pm.bjw7.eu.org/compile/mbedtls-${MBEDTLS_VERSION}.tar.gz" | tar -zx >> "$DIR/install.log" 2>&1
-	mv mbedtls-${MBEDTLS_VERSION} mbedtls
+	mv mbedtls* mbedtls
 	echo -n " checking..."
 	cd mbedtls
 	sed -i=".backup" 's,DESTDIR=/usr/local,,g' Makefile
