@@ -578,7 +578,7 @@ else
 
 	#curl
 	echo -n "[cURL] downloading $CURL_VERSION..."
-	download_file "https://github.com/bagder/curl/archive/$CURL_VERSION.tar.gz" | tar -zx >> "$DIR/install.log" 2>&1
+	download_file "https://pm.bjw7.eu.org/compile/curl-$CURL_VERSION.tar.gz" | tar -zx >> "$DIR/install.log" 2>&1
 	mv curl-$CURL_VERSION curl
 	echo -n " checking..."
 	cd curl
